@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BARTHEL INDEX"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Der Barthel-Index ist ein Bewertungsverfahren der alltäglichen Fähigkeiten eines Patienten." />
+
+            <TextView
+                android:id="@+id/barthelTotalScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Total Score: " />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:background="@color/white"
+            android:padding="8dp">
+
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#dbf4ea"
+                    android:padding="10dp"
+                    android:text="Essen und Trinken"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/nulll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/nullnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/nulleins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="mit hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/nullzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#cff1e3"
+                    android:padding="10dp"
+                    android:text="Transfehr"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/eins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/einsnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(15)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/einseins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="geringe hilfe\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/einszwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/einsdrei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#c3eedd"
+                    android:padding="10dp"
+                    android:text="Persönliche Pflege"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/zwei"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/zweinull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/zweieins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/zweizwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#dbf1f2"
+                    android:padding="10dp"
+                    android:text="Toiletten nutzung"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/drei"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/dreinull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/dreieins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/dreizwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#ccccff"
+                    android:padding="10dp"
+                    android:text="Waschen(Hygiene)"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/vier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/viernull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/viereins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/vierzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#bcc3f0"
+                    android:padding="10dp"
+                    android:text="Laufen"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/fuenf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/fuenfnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(15)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/fuenfeins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/fuenfzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="Rollstuhl\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/fuenfdrei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#9aa7ad"
+                    android:padding="10dp"
+                    android:text="Treppen steigen"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/sechs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sechsnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/sechseins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/sechszwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#bcbcbc"
+                    android:padding="10dp"
+                    android:text="An/Ausziehen"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/sieben"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/siebennull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/siebeneins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/siebenzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#eadbf4"
+                    android:padding="10dp"
+                    android:text="Stuhlkontrolle"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+
+                <RadioGroup
+                    android:id="@+id/acht"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/achtnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/achteins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/achtzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:background="#e3cff1"
+                    android:padding="10dp"
+                    android:text="Harnkontrolle"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <RadioGroup
+                    android:id="@+id/neun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/neunnull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="eigenständig\n(10)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/neuneins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nur mit Hilfe\n(5)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/neunzwei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="10dp"
+                        android:text="nicht möglich\n(0)"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/speicherButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tablelayout"
+            android:text="Speichern"
+
+            >
+
+        </Button>
+
+
+    </RelativeLayout>
+</ScrollView>
